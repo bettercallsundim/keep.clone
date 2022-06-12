@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  width: 100%;
+}
+input:focus,textarea:focus,input:active,textarea:active{
+  outline: none;
+  border: none;
+}
+.btn:hover{
+  background: gainsboro;
+
+}
+.btn{
+  border-radius: 50%;
+  aspect-ratio: 1;
+  width: 50px;
+}
+
+.lol{
+  position: relative;
+  width: 100%;
+}
+.item.klicked{
+  position: absolute;
+  width: 60%;
+  height: 380px;
+  left: 50%;
+  top: 0%;
+  z-index: 6;
+  transform: translate(-50%,-20%);
+}
+.item{
+  position: relative;
+}
+.dlt{
+  padding: 5px 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: red;
+}
+.dlt:hover{
+  background-color: white;
+}
+.another{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.over.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  left: 0;
+  z-index: 5;
+}
+textarea,input{
+  height: 100%;
+  width: 100%;
+}
+.title,.notes{
+  width: 100%;
+}
+.notes{
+  height: 100%;
+}

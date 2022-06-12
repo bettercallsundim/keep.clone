@@ -1,6 +1,7 @@
 const btn = document.querySelector(".btn");
 const lol = document.querySelector(".lol");
 const over = document.querySelector(".over");
+const message = document.querySelector(".message");
 
 let note = `
 <div class="item bg-gray-800 text-white border border-gray-400 rounded-xl px-4 py-6 text-sm flex flex-col items-start gap-y-4">
@@ -15,7 +16,14 @@ let note = `
   `;
 btn.addEventListener("click", () => {
     lol.insertAdjacentHTML('beforeend', note);
-    lol.lastElementChild.scrollIntoView();
+    if(lol.firstElementChild){
+        message.classList.add("hidden");
+     }else{
+        message.classList.remove("hidden");
+     }
+    if(lol.childElementCount>4){
+        lol.lastElementChild.scrollIntoView();
+    };
 
     ////master array
  let masterData = JSON.parse(localStorage.getItem("noteData")) || [];
@@ -42,7 +50,14 @@ function thisISGold() {
    downloadedData.splice(ind, 1);
     localStorage.setItem("noteData", JSON.stringify(downloadedData));
    items[ind].remove();
+   if(lol.firstElementChild){
+    message.classList.add("hidden");
+ }else{
+    message.classList.remove("hidden");
+ }
+
   };
+
  });
  mykostum(items, mytitle, mynote);
  return items;
@@ -104,6 +119,11 @@ let downloadedData=JSON.parse(localStorage.getItem("noteData"));
  const mynote = document.querySelectorAll(".mynote");
  const dlt = document.querySelectorAll(".dlt");
  thisISGold();
+ if(lol.firstElementChild){
+    message.classList.add("hidden");
+ }else{
+    message.classList.remove("hidden");
+ }
 });
 
 function updateData(ind,titleVal,noteVal) {
@@ -112,3 +132,4 @@ function updateData(ind,titleVal,noteVal) {
     downloadedData[ind].noting=noteVal;
     localStorage.setItem("noteData", JSON.stringify(downloadedData));
 }
+

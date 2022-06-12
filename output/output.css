@@ -527,6 +527,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 2rem;
 }
 
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .flex {
   display: flex;
 }
@@ -657,6 +665,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -693,6 +706,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pl-14 {
   padding-left: 3.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-2xl {

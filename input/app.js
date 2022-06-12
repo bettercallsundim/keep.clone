@@ -15,6 +15,8 @@ let note = `
   `;
 btn.addEventListener("click", () => {
     lol.insertAdjacentHTML('beforeend', note);
+    lol.lastElementChild.scrollIntoView();
+
     ////master array
  let masterData = JSON.parse(localStorage.getItem("noteData")) || [];
  let individualData = {
@@ -48,7 +50,9 @@ function thisISGold() {
 function mykostum(items, mytitle, mynote) {
  items.forEach((item, ind) => {
   item.onclick = () => {
+
    item.classList.add("klicked");
+   item.scrollIntoView();
    over.classList.add("overlay");
   };
   let iscursorinside = false;

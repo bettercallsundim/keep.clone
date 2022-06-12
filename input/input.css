@@ -36,6 +36,7 @@ input:focus,textarea:focus,input:active,textarea:active{
 }
 .item{
   position: relative;
+  height: 250px;
 }
 .dlt{
   padding: 5px 10px;
@@ -70,4 +71,7 @@ textarea,input{
 }
 .notes{
   height: 100%;
+}
+.item:hover{
+  border: 1.5px solid white;
 }

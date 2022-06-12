@@ -1,7 +1,7 @@
 module.exports = {
-  content: ["./input/**/*.{html,js}",],
+  content: ["./**/*.{html,js}",],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('tailwind-children')],
 }

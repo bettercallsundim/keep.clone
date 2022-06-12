@@ -34,6 +34,12 @@ input:focus,textarea:focus,input:active,textarea:active{
   z-index: 6;
   transform: translate(-50%,-20%);
 }
+@media screen and (max-width:500px) {
+  .item.klicked{
+    width: 90%;
+  }
+
+}
 .item.klicked .title input{
   font-size: 1.5rem;
   font-weight: 600;

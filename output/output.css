@@ -3072,3 +3072,7 @@ textarea,input{
     }
   }
 }
+
+.item.klicked .dlt{
+  display: none;
+}

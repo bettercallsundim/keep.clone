@@ -2653,6 +2653,11 @@ input:focus,textarea:focus,input:active,textarea:active{
   transform: translate(-50%,-20%);
 }
 
+.item.klicked .title input{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .item{
   position: relative;
   height: 250px;
@@ -2699,23 +2704,8 @@ textarea,input{
   height: 100%;
 }
 
-.item:hover{
+.item:hover:not(.item.klicked:hover){
   border: 1.5px solid white;
-}
-
-.placeholder\:text-sm::-moz-placeholder {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.placeholder\:text-sm:-ms-input-placeholder {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.placeholder\:text-sm::placeholder {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .placeholder\:text-base::-moz-placeholder {
